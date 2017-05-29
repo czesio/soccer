@@ -1,0 +1,28 @@
+{% extends 'layout.html.twig' %}
+
+{% set active = 'get_results' %}
+
+{% block content %}
+
+    <h1>{{ 'Games results:'|trans }}</h1>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Game id</th>
+                <th>User id</th>
+                <th>Nickname</th>
+                <th><a href="?order_by={{ order_by }}">Score</a></th>
+                <th>Season id</th>
+            </tr>
+        </thead>
+        {% for game in gamesData %}
+            <tr>
+                <td>{{ game['game_id'] }}</td>
+                <td>{{ game['user_id'] }}</td>
+                <td>{{ game['nickname'] }}</td>
+                <td>{{ game['score'] }}</td>
+                <td>{{ game['season_id'] }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

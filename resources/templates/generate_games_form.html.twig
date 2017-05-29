@@ -1,0 +1,13 @@
+{% extends 'layout.html.twig' %}
+
+{% set active = 'add_season' %}
+
+{% block content %}
+    <h1>{{ 'Generate games for users:'|trans }}</h1>
+    <table class="table table-bordered">
+    {% for key, user in app.session.get('users') %}
+        <tr><td>{{ user }}</td></tr>
+    {% endfor %}
+     </table>
+    {{ form(form, { attr: { novalidate: true } }) }}
+{% endblock %}

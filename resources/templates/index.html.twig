@@ -1,0 +1,10 @@
+{% extends 'layout.html.twig' %}
+
+{% set active = 'homepage' %}
+
+{% block content %}
+    <div class="jumbotron">
+        <a href="{{ path('add_season') }}">{{ 'Add seaason' | trans }}</a><br />
+        <a href="{{ path('get_results') }}">{{ 'Show last season results' | trans }}</a>
+    </div>
+{% endblock %}
