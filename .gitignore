@@ -1,5 +1,9 @@
 /node_modules/
-/var/
+/var/*
+!/var/cache
+/var/cache/*
+!/var/logs
+/var/logs/*
 /vendor/
 /web/assets/
 /.idea/
