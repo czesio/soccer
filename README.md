@@ -14,4 +14,7 @@ After installation
 ----
 
 In resources/config/prod - add proper database parameters.
+
 Database dump in directory: resources/db/soccer.sql
+
+Make access to var/logs and var/cache directory
