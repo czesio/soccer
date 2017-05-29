@@ -21,18 +21,5 @@ class ApplicationTest extends WebTestCase
         $client->request('GET', '/give-me-a-404');
         $this->assertEquals(404, $client->getResponse()->getStatusCode());
     }
-
-    public function testFullForm()
-    {
-        $client = $this->createClient();
-        $client->followRedirects(true);
-
-        $crawler = $client->request('GET', '/form');
-        $this->assertEquals('France', $crawler->filter('form select[id=form_country] option[value=FR]')->text());
-
-        $form = $crawler->selectButton('Submit')->form();
-        $crawler = $client->submit($form);
-        $this->assertEquals(1, $crawler->filter('.alert-danger')->count());
-    }
 }
 
