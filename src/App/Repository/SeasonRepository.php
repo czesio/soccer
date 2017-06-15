@@ -55,7 +55,7 @@ class SeasonRepository implements RepositoryInterface
     protected function buildSeason($seasonData)
     {
         $season = new Season();
-        $createdAt = new \DateTime(seasonData['created_at']);
+        $createdAt = new \DateTime($seasonData['created_at']);
         $season->setCreatedAt($createdAt);
         $season->setId($seasonData['id']);
         return $season;
