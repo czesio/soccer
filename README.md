@@ -1,6 +1,8 @@
 Soccer
 ============================
 
+TEST
+
 Based on [silex](http://silex.sensiolabs.org/)
 application.
 
